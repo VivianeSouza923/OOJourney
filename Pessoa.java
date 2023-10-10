@@ -1,32 +1,44 @@
-package coisasdalampada;
-// pessoa que come e dorme e que tem idade e nome
+package aula1010;
+
 public class Pessoa {
 	
-	int idade;
 	String nome;
+	int RG;
 	
-	void comer() {
-		System.out.println(nome + " de idade " + idade + " comeu");
+	
+	void ver() {
+		System.out.println("Pessoa de nome: " + nome + " e RG: " + RG);
 	}
 	
-	void dormir() {
-		System.out.println(nome + " de idade " + idade + " dormiu");
+	
+	Pessoa(String nome){
+		
+		this.nome = nome;
+		
+		
+	}
+	
+	
+
+	Pessoa(String nome, int RG){
+		
+		this.nome = nome;
+		this.RG = RG;
+		
+		
 	}
 	
 	public static void main(String[] args) {
-		Pessoa pessoa1 = new Pessoa();
-		Pessoa pessoa2 = new Pessoa();
 		
-		pessoa1.idade = 17;
-		pessoa1.nome = "Joao";
-		pessoa1.comer();
-		pessoa1.dormir();
+		Pessoa p1 = new Pessoa("Vivi");
+		p1.RG = 12345;
+		p1.ver();
 		
 		
-		pessoa2.idade = 29;
-		pessoa2.nome = "Julio";
-		pessoa2.comer();
-		pessoa2.dormir();
+		
+		Pessoa p2 = new Pessoa("Thorin", 1234);
+		p2.ver();
 	}
+	
 
 }
